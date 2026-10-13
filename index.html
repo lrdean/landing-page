@@ -16,7 +16,7 @@
       --paper: #ffffff;
       --ink: #161a1d;
       --muted: #596168;
-      --faint: #c7c5bd;
+      --faint: #bbb9b2;
       --accent: #c54b27;
       --accent-soft: #f2d8ce;
       --positive: #397c5b;
@@ -31,7 +31,7 @@
         --paper: #191d20;
         --ink: #f4f2ec;
         --muted: #b2b8ba;
-        --faint: #454b4e;
+        --faint: #414749;
         --accent: #ec7955;
         --accent-soft: #4a2a22;
         --positive: #75c997;
@@ -205,7 +205,7 @@
 
     .proof {
       padding: 22px 21px 23px;
-      border: 1px solid #3b3934;
+      border: 1px solid #373632;
       border-radius: 8px;
     }
 
@@ -296,13 +296,13 @@
     .experience .section-head { grid-template-columns: .45fr 1.55fr; }
     .experience .section-index { color: var(--accent); }
 
-    .timeline { margin-top: 14px; border-top: 1px solid color-mix(in srgb, var(--paper) 22%, transparent); }
+    .timeline { margin-top: 14px; border-top: 1px solid color-mix(in srgb, var(--paper) 28%, transparent); }
     .role {
       display: grid;
       grid-template-columns: 150px minmax(170px, .8fr) minmax(240px, 1.5fr);
       gap: 28px;
       padding: 24px 0;
-      border-bottom: 1px solid color-mix(in srgb, var(--paper) 18%, transparent);
+      border-bottom: 1px solid color-mix(in srgb, var(--paper) 24%, transparent);
     }
 
     .role time {
@@ -377,7 +377,7 @@
     }
 
     .approach article { padding: 30px; }
-    .approach article + article { border-left: 1px solid color-mix(in srgb, var(--accent) 28%, transparent); }
+    .approach article + article { border-left: 1px solid color-mix(in srgb, var(--accent) 34%, transparent); }
     .approach .mono { color: var(--accent); font: 500 12px/1.4 var(--mono); }
     .approach h3 { margin: 13px 0 7px; font-size: 18px; }
     .approach p { margin: 0; color: var(--muted); font-size: 14px; }
@@ -460,10 +460,11 @@
       .project-row { grid-template-columns: 40px minmax(170px, .8fr) minmax(220px, 1.2fr) 32px; gap: 18px; }
       .recruiter-cta { grid-template-columns: 1fr; }
       .approach { grid-template-columns: 1fr; }
-      .approach article + article { border-left: 0; border-top: 1px solid color-mix(in srgb, var(--accent) 28%, transparent); }
+      .approach article + article { border-left: 0; border-top: 1px solid color-mix(in srgb, var(--accent) 34%, transparent); }
     }
 
     @media (max-width: 560px) {
+      :root { --muted: #42484d; }
       .page { width: min(100% - 22px, 480px); padding-top: 12px; }
       .tabs-bar { align-items: flex-start; gap: 12px; }
       .tab { padding: 9px 12px; font-size: 13px; }
@@ -484,6 +485,10 @@
       .project-row:hover { padding-inline: 6px; }
       .recruiter-cta { margin-inline: -11px; padding: 28px 22px; border-radius: 0 22px 0 0; }
       footer { flex-direction: column; }
+    }
+
+    @media (max-width: 560px) and (prefers-color-scheme: dark) {
+      :root { --muted: #c5cacc; }
     }
 
     @media (prefers-reduced-motion: reduce) {
