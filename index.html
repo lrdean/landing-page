@@ -198,27 +198,16 @@
 
     .proof-strip {
       display: grid;
-      grid-template-columns: 1.2fr 1fr 1fr;
-      border-top: 1px solid var(--faint);
-      border-bottom: 1px solid var(--faint);
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
       margin-bottom: 78px;
     }
 
     .proof {
-      padding: 23px 22px 24px 0;
-    }
-
-    .proof:first-child {
       padding: 22px 21px 23px;
-      border: 1px solid #98958d;
+      border: 1px solid #68655e;
+      border-radius: 8px;
     }
-
-    .proof + .proof {
-      padding-left: 24px;
-      border-left: 1px solid var(--faint);
-    }
-
-    .proof:first-child + .proof { border-left: 0; }
 
     .proof strong {
       display: block;
@@ -481,10 +470,7 @@
       .location { font-size: 10px; max-width: 120px; }
       .hero { padding: 52px 0 52px; }
       h1 { font-size: clamp(43px, 14.5vw, 70px); }
-      .proof-strip { grid-template-columns: 1fr; margin-bottom: 60px; }
-      .proof { padding: 17px 0; }
-      .proof:first-child { padding: 16px; }
-      .proof + .proof { padding-left: 0; border-left: 0; border-top: 1px solid var(--faint); }
+      .proof-strip { grid-template-columns: 1fr; gap: 10px; margin-bottom: 60px; }
       .overview-grid { margin-bottom: 62px; }
       .experience { margin-inline: -11px; padding: 30px 22px; border-radius: 0 24px 0 0; }
       .role { grid-template-columns: 1fr; gap: 6px; }
